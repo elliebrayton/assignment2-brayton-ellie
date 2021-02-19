@@ -24,10 +24,10 @@ if($result = mysqli_query($dbc, $query)){ //Run the query
 
 
     //Make the form 
-    echo '<form action="edit_quote.php" method=POST">
-         <p><label><textarea name="quote" row="5" cols="30">' . htmlentities($row['quote']) . '</textarea></label></p></form>
-         <p><label>Source <input type="text" name="source" value="' . htmlentities($row['source']) . '"></label></p>
-         <p><label>Is this a favorite? <input type="checkbox" name="favorite" value="yes"';
+    echo '<form action="edit_quote.php" method="POST">
+    <p><label>Quote <textarea name="quote" rows="5" cols="30">' . htmlentities($row['quote']) . '</textarea></label></p>
+    <p><label>Source <input type="text" name="source" value="' . htmlentities($row['source']) . '"></label></p>
+    <p><label>Is this a favorite? <input type="checkbox" name="favorite" value="yes"';
 
 
     //Check the box if it is a favorite 
