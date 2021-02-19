@@ -30,7 +30,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $favorite = 0;
         }
 
-        $query = "INSERT INTO quotes(quote,source,favorite) VALUES ('$quotes', '$source', '$favorite')";
+        $query = "INSERT INTO quotes(quote,source,favorite) VALUES ('$quote', '$source', '$favorite')";
+        mysqli_query($dbc, $query);
 
         if(mysqli_affected_rows($dbc) == 1){
             echo "<p>Your quotation has been stored</p>";
@@ -52,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 <form action="add_quote.php" method="post">
     <p><label>Quote <textarea name="quote" cols="30" rows="5"></textarea></label></p>
-    <p><label>Quote <input type="text" name="source"></label></p>
+    <p><label>Source <input type="text" name="source"></label></p>
     <p><label>Is this a favorite?<input type="checkbox" name="favorite" value="yes"></label></p>
     <p><input type="submit" name="submit" value="Add this Quote!"></p>
 </form>

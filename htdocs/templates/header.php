@@ -1,7 +1,7 @@
 <?php
 
 //Include the functions.php file 
-include('includes/functions.php');
+include('includes/function.php');
 
 ?>
 
