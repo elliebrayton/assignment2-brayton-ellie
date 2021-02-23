@@ -17,13 +17,14 @@
 //Define a query 
 $query = "SELECT id, quote, source, favorite FROM quotes ORDER BY date_entered DESC";
 
+
 //Run the query
 if($result = mysqli_query($dbc, $query)){
     //Retrieve the return records:
     while($row = mysqli_fetch_array($result)){
         
         //Echo the quote
-        echo "<div><blockquote>{$row['quote']}</blockquote>{$row['source']}\n";
+        echo "<div class='quote'><blockquote>{$row['quote']}</blockquote><span class='source'>{$row['source']}</span>\n";
 
         //Is this a favorite
 
@@ -32,7 +33,7 @@ if($result = mysqli_query($dbc, $query)){
         }
 
         //Add Admin Links 
-        echo "<p>Quote Admin: <a href=\"edit_quote.php?id={$row['id']}\">Edit</a><a href=\"delete_quote.php?id={$row['id']}\">Delete</a></p></div>";
+        echo "<p>Quote Admin: <a class='btn-sm btn-primary text-decoration-none' href=\"edit_quote.php?id={$row['id']}\">Edit</a> <a class='btn-sm btn-primary text-decoration-none' href=\"delete_quote.php?id={$row['id']}\">Delete</a></p></div>";
     } //While Loop End
 }else{ //Why the Query did not run
 

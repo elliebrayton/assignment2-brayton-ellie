@@ -28,7 +28,7 @@
 
         //Is it a favorite
         if($row['favorite'] == 1){
-            echo "<strong>Favorite!</strong>";
+            echo "<strong> Favorite!</strong>";
         }
 
         //Close Div
@@ -36,7 +36,7 @@
 
         //If Admin is logged in, show admin links for the quote
         If(is_administrator()){
-            echo "<p>Quote Admin: <a href=\"edit_quote.php?id={$row['id']}\">Edit</a> | <a href=\"delete_quote.php?id={$row['id']}\">Delete</a></p> \n";
+            echo "<p>Quote Admin: <a class='btn-sm btn-primary text-decoration-none' href=\"edit_quote.php?id={$row['id']}\">Edit</a> <a class='btn-sm btn-primary text-decoration-none'href=\"delete_quote.php?id={$row['id']}\">Delete</a></p> \n";
         }
     }else{
         echo "<p class='error'>Could not update because:" . mysqli_error($dbc) . "</p>";

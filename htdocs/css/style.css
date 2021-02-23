@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    margin: 10px;
+    width: 300px;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+}
+
+blockquote {
+    font-size: 18px;
+    font-style: italic;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+li{
+    padding: 10px;
+}
+
+input[type="submit"] {
+    background: #70aeb9;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
